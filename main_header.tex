@@ -1,0 +1,163 @@
+%
+% main_header.tex
+%
+%\documentclass[twocolumn]{report} %MM
+\documentclass[twocolumn,dvipdfmx]{report} %TS
+\usepackage{multicol}
+
+\makeatletter
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+  {}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+\makeatother
+
+%\usepackage[dvips]{graphicx}
+%\usepackage[dvipdfmx]{graphicx} %Sako 20180725
+\usepackage{graphicx} % Sako comment out
+\usepackage{amsmath,amssymb} %YT
+\usepackage{times,mathptmx} %YT
+\usepackage{url} %TY
+\usepackage{subfig} %TY
+%\usepackage{./stfloats} %TY11
+\usepackage{AnRep}% 
+\usepackage{color}
+%\usepackage{footnote}
+%\makesavenoteenv{table}
+\usepackage{threeparttable}
+\usepackage{epstopdf}
+\usepackage{comment}
+\usepackage{seqsplit}
+\usepackage{supertabular}
+
+\textwidth 42pc
+\textheight 59pc  %%chnged !
+\columnsep 1pc
+\raggedbottom
+\oddsidemargin -2.5pc
+\evensidemargin -2.5pc
+\topmargin -3pc  %%chnged !
+\headsep .8pc
+%\mathindent 1pc
+\pagestyle{myheadings}
+
+\def\textfraction{0.1} %TY10
+\def\floatpagefraction{0.9} %TY10
+\def\dblfloatpagefraction{0.9} %TY10
+
+\def\nue{\nu_e}
+\def\neb{\bar \nu_e}
+\def\num{\nu_\mu}
+\def\nmb{\bar \nu_\mu}
+\def\nut{\nu_\tau}
+\def\ntb{\bar \nu_\tau}
+\def\nub{\bar \nu}
+\def\dms{\Delta m^2}
+\def\sst{\sin^2 2\theta}
+\def\tasq{\tan^2\theta}
+\def\sisq{\sin^2\theta}
+
+%%% these are bitmap fonts
+%%% use PostScript fonts instead these (03/28/2005 Y.Takeuchi)
+%\newfont{\sff}{cmssi9} % for affiliation and section italic
+%\newfont{\bigsf}{cmss12 scaled 2000} % for title
+%\newfont{\midsf}{cmss12 scaled 1000} % for title's subscription
+%\newfont{\bfsf}{cmssbx10 scaled 1200} % for title's subscription
+%\newfont{\bfsfn}{cmssbx10 scaled 1000} % for title's subscription
+%\newfont{\smlsf}{cmss12 scaled 600}  
+                       % for section's subscription e.g.$_{\mbox{\smlsf 2}}$
+%\newfont{\bigsff}{cmssi12 scaled 2000} % for title's italic
+
+\newfont{\bigsf}{phvr8r scaled 2000} % for title (YT)
+\newfont{\bfsf}{phvb8r scaled 1200}  % for title's subscription (YT)
+
+
+\newcommand{\pmonth}{}
+\newcommand{\spec}{}
+\newcommand{\no}{}
+\newcommand{\bi}{\bfseries\itshape}
+\providecommand{\yen}{Y\llap=}
+
+\newcommand{\lsim}{\mbox{\raisebox{-1.ex}
+{$\stackrel{\textstyle <}{\textstyle \sim}$}}}
+\newcommand{\gsim}{\mbox{\raisebox{-1.ex}
+{$\stackrel{\textstyle >}{\textstyle \sim}$}}}
+%\newcommand{\sstt}      {\sin^2 2\theta}
+%\newcommand{\dms}       {\Delta m^2}
+\newcommand{\plumin}[2]{^{+#1}_{-#2}}
+
+\def\nue{\nu_e}
+\def\neb{\bar \nu_e}
+\def\num{\nu_\mu}
+\def\nmb{\bar \nu_\mu}
+\def\nut{\nu_\tau}
+\def\ntb{\bar \nu_\tau}
+\def\nub{\bar \nu}
+\def\dms{\Delta m^2}
+\def\sst{\sin^2 2\theta}
+\def\tasq{\tan^2\theta}
+
+%%%% these are bitmap fonts
+%%%% use PS fonts, instead
+%\font\lg=cmr12
+%\font\bg=cmr17
+%\font\sm=cmr7
+%\font\fontA=cmr10 scaled \magstep3
+%%\font\ssm=cmss12
+%\newfont{\ssm}{cmssbx10 scaled 1200} % for title's subscription
+%\font\tsmb=cmssbx10 %MM
+%\font\ssml=cmss12   %MM
+%\font\tsm=cmss10
+%\font\utsm=cmss10
+%\parindent=10pt
+
+\def\utsm{\sf} %YT
+\font\tsmb=phvb8r  %YT
+\newfont{\ssm}{phvr8r scaled 1200} %YT
+\def\tsm{\sf}  %YT
+
+\def\overset#1\to#2{\mathop{#2}\limits^{#1}}
+\def\underset#1\to#2{\mathop{#2}\limits_{#1}}
+%\settabs 2 \columns
+% A useful Journal macro
+\def\Journal#1#2#3#4{{#1} {\bf #2}, #3 (#4)}
+
+% Some useful journal names
+\def\NCA{\em Nuovo Cimento}
+\def\NIM{\em Nucl. Instrum. Methods}
+\def\NIMA{{\em Nucl. Instrum. Methods} A}
+\def\NPB{{\em Nucl. Phys.} B}
+\def\PLB{{\em Phys. Lett.}  B}
+\def\PRL{\em Phys. Rev. Lett.}
+\def\PRD{{\em Phys. Rev.} D}
+\def\ZPC{{\em Z. Phys.} C}
+\def\APJ{\em Ap. J.}
+\def\AP{\em Astroparticle Phys.}
+\def\JPG{\em J. Phys. G: Nucl. Part. Phys.}
+
+% Some other macros used in the sample text
+\def\st{\scriptstyle}
+\def\sst{\scriptscriptstyle}
+\def\mco{\multicolumn}
+\def\epp{\epsilon^{\prime}}
+\def\vep{\varepsilon}
+\def\ra{\rightarrow}
+\def\ppg{\pi^+\pi^-\gamma}
+\def\vp{{\bf p}}
+\def\ko{K^0}
+\def\kb{\bar{K^0}}
+\def\al{\alpha}
+\def\ab{\bar{\alpha}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\CPbar{\hbox{{\rm CP}\hskip-1.80em{/}}}%temp replacement due to no font
+
+% Extracted from AASTeX (TY)
+\newcommand\fdg{\mbox{$.\!\!^\circ$}}%
+
+\renewcommand{\bibname}{AAA}%

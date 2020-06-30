@@ -1,45 +1,38 @@
 \subsubsection*{\bf Cryogenic system}
 \noindent {\sf [Spokesperson :\ Takafumi USHIBA]}
 
-\noindent {\sf \small ICRR, The Univ.\ of Tokyo, Kashiwa, Chiba 277-8582}
+\noindent {\sf \small ICRR, The Univ.\ of Tokyo, Hida, Gifu 506-1205}
 \vspace{3pt}
 
-A key feature of KAGRA is to cool four sapphire mirrors, which are used for constitution of two arm cavity, to 20\,K. Members working for a cryogenic system, which plays an important role for achieving this unique characteristics, is mainly constituted by that of ICRR, KEK, and the University of Toyama. Here, we summarize the activity of members of ICRR in FY 2017.
+One of unique features of KAGRA is cooling sapphire mirrors, which are installed at 3-km arm cavity. Members working for KAGRA cryogenic system, which plays an important role for achieving this unique characteristics, are mainly constituted by that of ICRR, KEK, and the University of Toyama. Here, we summarize the activity of members of ICRR in FY 2019.
 
 \paragraph*{\bi Cryogenic payload}
+A KAGRA sapphire mirror is suspended by 9-stage suspension and its bottom 4 stages that include sapphire mirror is called cryogenic payload. Angular and translational motion of these sapphire mirrors must be controlled well for operating them as an interferometer. Therefore, damping and global control of suspension were implemented and improved in this fiscal year.
 
-A KAGRA sapphire mirror is suspended by 9-stage suspension and its bottom 4 stages that include sapphire mirror is called cryogenic payload. The first cryogenic payload with a sapphire mirror was installed at Kamioka in November, 2017. Figure \ref{fig:KAGRAcryo payload} shows the cryogenic payload installed at KAGRA site. This payload was cooled down after installation and reached about 18\,K, which is below the target temperature of KAGRA, 20\,K.
+One large improvement of the suspension control is implementation of hierarchical control of suspension. After the implementation of this hierarchical control, angular motion of sapphire mirror became very small: less than 100\,nrad in RMS, which is small enough to operate the interferometer. Thanks to this improvement, we succeeded to operate a power-recycling Fabry-Perot Michelson interferometer with the cryogenic payloads.
 
-Performance evaluation of sensors and actuators was performed at the site after cooling. It was then confirmed that all sensors and actuators on the cryogenic payload worked even at cryogenic temperature. Damping feedback system for the suspension eigenmode was also implemented, which is significant to operate KAGRA as an interferometer.
+\paragraph*{\bi Heatlink vibration isolation system}
+KAGRA cryogenic payload has heatlinks, which are directly connected to cryocoolers, for cooling sapphire mirror to 20\,K. Since cryocooler makes large vibration compaired to the ground motion at Kamioka site, the vibration through these heatlinks can be contaminate the detector sensitivity of KAGRA. So, we developed heatlink vibration isolation system (HLVIS) to mitigate the vibration through heatlinks.
 
-\begin{figure}[hbtp]
-\begin{center}
-\includegraphics[width=0.4\textwidth]{astrodiv/gw/cry/KAGRAcryo_payload.eps}
-\caption{\utsm \noindent{\narrower{Cryogenic payload installed into the cryostat at KAGRA site}}}
-\label{fig:KAGRAcryo payload}
-\end{center}
-\end{figure}
+HLVIS consists of three-stage pendulum. Each stage is suspended by four tension springs in order to mitigate not only holizontal vibration but also vertical vibration. Vibration isolation ratio was measured below 10\,Hz and measurement result was almost matched with designed value.
 
-\paragraph*{\bi Pure aluminum heat conductor}
+\paragraph*{\bi New design of mirror inclination control system}
+A cryogenic payload has an inclination adjustment system called moving mass system. the moving mass system consists of three components: cryogenic compatible stepper motor, oil-free ball screw, and copper block. We can drive a copper block by rotating stepper motor and change the mass balance of the cryogenic payload to tilt the mirror.
 
-In order to cool the mirror down to 20\,K, it is necessary to utilize a high thermal-conductive heat conductor because at cryogenic temperature, especially below 100\,K, thermal radiation becomes small and cannot cool the mirror effectively. However, these heat conductors can easily induce vibration that worsens the KAGRA sensitivity. It is therefore important for the heat conductor to have flexibility enough to reduce the vibration transmission via itself. To realize high thermal conductivity and flexibility, Stranded cables made of pure aluminum of 99.9998\% (5N8 aluminum) are used for KAGRA heat conductor.
+Basically, this moving mass system workes well but in terms of long-term stability, there is an issue to be solved. So, we started to re-design the moving mass system. In the new moving mass system, we adopted pulleys instead of ball screw. In FY 2019, an initial design was finished and prototype was fabricated.
 
-In FY 2017, thermal conductivity and flexibility measurement of the heat conductor were performed. Then, we measured a thermal conductivity of $1.85\times10^{4}$\,W/m/K at 10\,K, which is high sufficiently for applying to heat conductors for KAGRA. We also measured a spring constant of stranded heat conductor and compared with that of a single aluminum wire. Then, we confirmed that a spring constant of this stranded aluminum heat conductor is 43 times smaller than that of the single one.
+\paragraph*{\bi Sapphire fiber thermal conductivity}
+In KAGRA cryogenic payload, high purity aluminum heatlink is installed except for the sapphire mirror to cool the suspension effectively. Instead of this, sapphire mirror is cooled only by sapphire fibers in order not to induce additional vibration and mechanical losses to the mirror. So, thermal conductivity of sapphire fibers directly affects the cooling performance of the cryogenic payload.
 
-\paragraph*{\bi Vibration measurement inside the cryostat}
-We should use huge cryostat (roughly saying, diameter and hight are both 4\,m) in order to install the cryogenic payload and two-layer radiation shields. The resonant frequency of vibration modes of such huge structures is several tens of hertz, which covers KAGRA observation band. So, it is important to make a research for eigenmodes of the cryostat and implement their damping.
+In FY2019, we measured thermal conductivity of several sapphire samples and obtained 4000\,W/m$\cdot$K at 20\,K. This value is slightly lower than KAGRA requirement but we started the collaboration with foreign institute for making better sapphire fibers.
 
-An interferometric accelerometer that can be fundamentally used even at the cryogenic temperature was developed. vibration level measurement inside the cryostat under the room temperature condition by using this accelerometer was performed. Then, we found that there is 1000 times lager vibration around 30\,Hz than typical ground vibration of KAGRA site. We also confirmed vibration from the cryocoolers are slightly larger than the ground vibration as well. 
+\paragraph*{\bi Molecular adosorption at cooled mirror surface}
+Gas molecules that hit to cryogenic objects are trapped at these surface. This effect is called cryopumping effect and its pumping power is very large. So, cryogenic mirror of KAGRA can trap residual gas molecules inside vacuum chamber and make thin layers on the mirror surface. Since the thin layers will change the reflectivity of the mirror, this effect can affect the detector sensitivity of KAGRA.
+First, we measure the speed of molecular adosorption in the KAGRA cryostat. Then, we calculated the impact for the KAGRA detector sensitivity based on the adosorption speed we measured. In addition to this, we considerred the effective way to remove the adsorbed molecules and demonstrated the disorption by using $CO_2$ laser.
 
-\paragraph*{\bi Magnetic field measurement}
+\paragraph*{\bi Doctoral theses}
 
-Coil magnet actuators are adopted to control the cryogenic payload, and sapphire mirror has a small magnet on its AR side. So, fluctuation of magnetic field around the payload make some force to the mirror and shake it. Magnetic field of the earth is small enough but there are many devices around the payload such as cryocoolers, vacuum pump, and so on. So, magnetic field generated by these devices should be well studied.
-
-We compared the magnetic field when the cryocoolers are working with that when they are not working. As a result, we confirmed that there are several periodic magnetic field generated by the cryocoolers. Further investigation for these magnetic field issue is promoting.
-
-\paragraph*{\bi Master theses}
-
-Two Master thesis, {\it Vibration Analysis of Cryostat on KAGRA Site} and {\it A Study of the KAGRA Cryogenic Payload System and its Conduction Cooling}, were accepted in FY 2017. 
+One doctral thesis, {\it Optical and thermal study of molecular thin layers on cryogenic mirrors in next-generation gravitational wave telescopes} was accepted in FY 2019. 
 
 \paragraph*{\bi Acknowledgement}
 

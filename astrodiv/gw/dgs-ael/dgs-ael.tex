@@ -1,3 +1,4 @@
+%!TEX root = ../../../2019main.tex
 %\input{main_header.tex}
 %\begin{document}
 
@@ -5,7 +6,7 @@
 \vspace{10pt}
 \subsubsection*{\bf  Integrated DAQ/control system using real time computers}
 \vspace{3pt}
-\noindent {\sf [Spokesperson :\ Osamu MIYAKAWA]}
+\noindent {\sf [Spokesperson :\ Shoichi OSHINO]}
 
 \vspace{3pt}
 \noindent {\sf \small ICRR, The Univ.\ of Tokyo, Hida, Gifu 506-1205}
@@ -13,24 +14,17 @@
 \vspace{3pt}
 
 
-The 2018 fiscal year, we started from 9 days short operation with a 3km simple Michelson configuration with a single end mirror in low temperature. By the short operation in May of 2018, basically we established the whole integrated control/data acquisition system for KAGRA.
+The 2019 fiscal year, we started the observation with a power-recycled Fabry-Perot-Michelson interferometer from February 2020. During this observation, we continued to maintain stable DAQ/control system.
 
 \paragraph*{\bi Stable operation with the real time control system}
 
-The interferometer configuration was just a Michelson type and it was still much simpler than the same as the final one. However as a control system, it was almost the same as the final configuration. The difference was only that we had no input test masses. We had already prepared the control system for the two input test masses. So we did not increase the number of control computers in this FY, even the input test masses were installed after the short operation in the rest of this FY. On the other hand, we spent a lot of time to stabilized the whole control/data acquisition system. At this stage we had 25 real time control computers, 8 data acquisition computes, 10 servers as camera, script etc. and 15 workstations as user clients. Especially connecting such a many numbers of the real time control computers were the first experience for us. We had carefully performed many tests for this system in the independent test bench but the number of computers had been limited in the test. We experienced several serious issues caused by them number of computers working at a time.
+The first part of 2019 was the process of replacing computers with a faster ones. This is a countermeasure to the glitches that were identified last year, which occur under high loads. Basically the control computers use a real time operating system. Some delay due to the heavy task causes a serious problem for control loops and it emerges as jumps or glitches on many signals. Eventually, by replacing 17 computers, these glitches no longer occur and we are able to control the interferometer with stable digital system.
 
-The biggest issue was that we noticed some glitches happened in the signal. They happened when the control computers had a heavy load. Basically the control computers use a real time operating system. Some delay due to the heavy task causes a serious problem for control loops and it emerges as jumps or glitches on many signals. These glitches increased in proportional with the number of operated computers. Then we realized that this issue can be solved by replacing the slow computer to the faster one after some experiments at the test bench. We have just started replacing the slow computers which are being used in KAGRA. Once the new faster computer runs processes in the KAGRA system, it never happens glitches or some other serious problem. We keep replacing existing slow computers in the next year and we will finish it before the observation starts in the end of 2019.
+In the 2018 fiscal year, we used a simple Michelson interferometer to perform operations, but we have to build a more complicated interferometer for the actual observations. Therefore, we have installed various types of hardware to enable more complicated control. In particular, we have installed and enhanced the hardware for length sensing control and output mode cleaner. Finally, we used the digital system of 25 RTPCs, 50 ADCs, 39 DACs and 73 BIOs to control the interferometer.
 
-\paragraph*{\bi Guardian: automatic operation system}
-
-One of the big topics of this fiscal year was that some automatic control system implemented drastically. It was called 'Guardian'. The Guardian is always looking at all important channels and puts proper commands according to a script that was written by human before. Almost of subsystems in KAGRA are controlled under this Guardian, and they are automatically operated as a whole gravitational wave detector. KAGRA is the huge plant which consists of a large number of subsystems. We need to connect the subsystems, and the KAGRA should work as a whole combined device as a gravitational wave detector.
+In late 2019, commissioning work of interferometer began and the sensitivity of gravitational wave is visible. Since the DAQ/control system was already stable, we began reducing the noise to improve sensitivity. A number of circuits have been installed in the KAGRA mine. A number of AC-DC converters are also installed to supply power to these circuits. These DC power supplies generate a lot of magnetic noise, which is expected to affect the sensitivity of the interferometer. We solved this problem by replacing the power supplies farther away from the circuit and wiring the power cables. Most of the power supplies have already been replaced. We will continue to replace the remaining power supplies in fiscal year 2020.
 
 
-\paragraph*{\bi Stability of data acquisition system}
-
-This system also has an important role as a data acquisition system. This data acquisition system consists of a collecting data server, data providing servers, and data writing servers. Actual chunk of data comes from the control computers and it was collected by the data collecting server. As increasing number of control computers, amount of data increased drastically in this year, and we noticed that the streaming data sometimes failed once or several times in a week. We had to replace some of the weakest servers to the faster one with more memories. We had prepared two paths for data acquisition as redundancy, so we did not miss data yet. We need to keep watching the stability of these data transfers until the actual observation starts.
-
-In the FY of 2019, we plan to join an observation with LIGO and VIRGO. It is expected that this DAQ/control system performs stable automatic operations for commissioning work, noise hunting, and the observation.
 
 
 %\end{document}
